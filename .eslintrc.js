@@ -19,6 +19,11 @@ module.exports = {
     sourceType: 'module'
   },
   plugins: ['react', 'jest', 'cypress'],
+  settings: {
+    react: {
+      version: 'detect'
+    }
+  },
   rules: {
     indent: ['error', 2],
     'linebreak-style': ['error', 'unix'],
@@ -28,7 +33,7 @@ module.exports = {
     'no-trailing-spaces': 'error',
     'object-curly-spacing': ['error', 'always'],
     'arrow-spacing': ['error', { before: true, after: true }],
-    'no-console': 'error',
+    'no-console': ['error', { allow: ['warn', 'error', 'log'] }],
     'react/prop-types': 0
   }
 }
